@@ -1,0 +1,29 @@
+@include media-md {
+  .menu-btn {
+    visibility: hidden;
+
+    &__burger {
+      visibility: hidden;
+    }
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      transform: translateY(0);
+      height: auto;
+      display: block;
+      background-color: transparent;
+      text-align: right;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      &__item {
+        transform: translateX(0);
+        display: inline-block;
+        margin: 0 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+$primary-color: #272727;
+$secondary-color: #ff652f;
+$body-font: "Open Sans", sans-serif;
+$font-weights: (
+  "thin": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 80%) {
+    @return #000;
+  } @else {
+     @return #fff;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
